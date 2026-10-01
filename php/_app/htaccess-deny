@@ -1,0 +1,2 @@
+# Deny direct access to application code, config, data, and SQL.
+Require all denied

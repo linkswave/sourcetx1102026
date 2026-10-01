@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://sourcetx.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://sourcetx.com/about.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://sourcetx.com/services.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://sourcetx.com/software-development.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sourcetx.com/mobile-app-development.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sourcetx.com/ui-ux-design.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sourcetx.com/cloud-devops.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sourcetx.com/qa-testing.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sourcetx.com/data-analytics.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sourcetx.com/ai-machine-learning.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sourcetx.com/ai-automation-agents.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sourcetx.com/digital-transformation.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sourcetx.com/staff-augmentation.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sourcetx.com/project-management.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sourcetx.com/ai-workflow-automation.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sourcetx.com/managed-security-compliance.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sourcetx.com/cloud-infrastructure-optimization.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sourcetx.com/data-engineering-pipelines.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sourcetx.com/case-studies.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sourcetx.com/ai-lab.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://sourcetx.com/assessment.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://sourcetx.com/managed-services.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sourcetx.com/insights.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://sourcetx.com/employers.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://sourcetx.com/job-seekers.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://sourcetx.com/jobs.html</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
+  <url><loc>https://sourcetx.com/contact.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://sourcetx.com/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://sourcetx.com/terms.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>

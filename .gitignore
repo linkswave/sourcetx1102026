@@ -1,0 +1,14 @@
+node_modules/
+.env
+uploads/*
+!uploads/.gitkeep
+data/applications.json
+data/messages.json
+data/talent_requests.json
+data/chat_captures.json
+data/pages.json
+php/_app/config.php
+php/_app/uploads/
+dist-php/
+dist-php.zip
+_archive/

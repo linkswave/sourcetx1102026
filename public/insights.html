@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Insights | SourceTX</title>
+  <meta name="description" content="Practical insights on enterprise AI, data engineering, cloud, Databricks, Snowflake, Microsoft Fabric, analytics, architecture, and data governance from SourceTX.">
+  <link rel="canonical" href="https://sourcetx.com/insights.html">
+  <meta property="og:url" content="https://sourcetx.com/insights.html">
+  <meta property="og:title" content="Insights | SourceTX">
+  <meta property="og:description" content="Practical insights on enterprise AI, data engineering, cloud, Databricks, Snowflake, Microsoft Fabric, analytics, architecture, and data governance from SourceTX.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://sourcetx.com/pictures/hero-team.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Insights | SourceTX">
+  <meta name="twitter:description" content="Practical insights on enterprise AI, data engineering, cloud, and analytics from SourceTX.">
+  <meta name="twitter:image" content="https://sourcetx.com/pictures/hero-team.webp">
+  <link rel="icon" href="pictures/favicon.png?v=2">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=20">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"SourceTX Insights","url":"https://sourcetx.com/insights.html","description":"Practical insights on enterprise AI, data engineering, cloud, and analytics.","hasPart":[{"@type":"TechArticle","headline":"Building Enterprise AI Agents That Work With Your Business Data","url":"https://sourcetx.com/insights.html#enterprise-ai-agents"},{"@type":"TechArticle","headline":"RAG vs Fine-Tuning: Choosing the Right Enterprise AI Architecture","url":"https://sourcetx.com/insights.html#rag-vs-finetuning"},{"@type":"TechArticle","headline":"Databricks vs Snowflake vs Microsoft Fabric","url":"https://sourcetx.com/insights.html#databricks-snowflake-fabric"},{"@type":"TechArticle","headline":"Modernizing Legacy ETL Pipelines","url":"https://sourcetx.com/insights.html#modernizing-etl"},{"@type":"TechArticle","headline":"Building a Modern Lakehouse Architecture","url":"https://sourcetx.com/insights.html#lakehouse-architecture"},{"@type":"TechArticle","headline":"How to Prepare Enterprise Data for Generative AI","url":"https://sourcetx.com/insights.html#data-for-genai"},{"@type":"TechArticle","headline":"Reducing Databricks and Spark Costs","url":"https://sourcetx.com/insights.html#reducing-spark-costs"},{"@type":"TechArticle","headline":"Designing Reliable Real-Time Data Pipelines","url":"https://sourcetx.com/insights.html#realtime-pipelines"},{"@type":"TechArticle","headline":"Building an Enterprise Data Governance Strategy","url":"https://sourcetx.com/insights.html#data-governance-strategy"},{"@type":"TechArticle","headline":"Moving From Legacy Data Warehouses to the Cloud","url":"https://sourcetx.com/insights.html#warehouse-to-cloud"}]}</script>
+  <script defer src="js/app.js?v=5"></script>
+  <script defer src="js/insights.js?v=1"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!--src-shell-header-->
+<header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand" aria-label="SourceTX home">
+        <span class="logo">
+          <img class="logo-mark" src="pictures/sourceTX-mark.png" alt="SourceTX mark" width="29" height="36">
+          <span class="wordmark">Source<span class="tx">TX</span></span>
+        </span>
+      </a>
+      <button class="menu" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation"><span class="menu-bar"></span><span class="menu-bar"></span><span class="menu-bar"></span></button>
+      <nav id="main-nav">
+        <div class="nav-item has-dropdown">
+          <a class="nav-link" href="services.html" aria-haspopup="true">Services</a>
+          <button class="nav-caret" type="button" aria-expanded="false" aria-controls="nav-menu-services" aria-label="Toggle Services submenu"><svg viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="M1 1.5 6 6.5l5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="dropdown mega" id="nav-menu-services">
+            <div class="dropdown-grid">
+            <div class="dropdown-col">
+              <span class="dropdown-title">Engineering &amp; Delivery</span>
+              <a href="software-development.html">Software Development</a>
+              <a href="mobile-app-development.html">Mobile App Development</a>
+              <a href="ui-ux-design.html">UI/UX Design</a>
+              <a href="qa-testing.html">QA &amp; Testing</a>
+              <a href="project-management.html">Project Management</a>
+            </div>
+            <div class="dropdown-col">
+              <span class="dropdown-title">Cloud &amp; Data</span>
+              <a href="cloud-devops.html">Cloud &amp; DevOps</a>
+              <a href="cloud-infrastructure-optimization.html">Cloud Optimization &amp; Infrastructure</a>
+              <a href="data-analytics.html">Data &amp; Analytics</a>
+              <a href="data-engineering-pipelines.html">Data Engineering &amp; Pipelines</a>
+            </div>
+            <div class="dropdown-col">
+              <span class="dropdown-title">AI &amp; Transformation</span>
+              <a href="ai-machine-learning.html">AI &amp; Machine Learning</a>
+              <a href="ai-automation-agents.html">AI Automation &amp; Agents</a>
+              <a href="ai-workflow-automation.html">AI Integration &amp; Workflow</a>
+              <a href="digital-transformation.html">Digital Transformation</a>
+            </div>
+            <div class="dropdown-col">
+              <span class="dropdown-title">Talent &amp; Security</span>
+              <a href="staff-augmentation.html">Staff Augmentation</a>
+              <a href="managed-security-compliance.html">Managed Security &amp; Compliance</a>
+            </div>
+            </div>
+            <a class="dropdown-all" href="services.html">View all services <span aria-hidden="true">&#8594;</span></a>
+          </div>
+        </div>
+        <div class="nav-item has-dropdown">
+          <a class="nav-link" href="case-studies.html" aria-haspopup="true">Solutions</a>
+          <button class="nav-caret" type="button" aria-expanded="false" aria-controls="nav-menu-solutions" aria-label="Toggle Solutions submenu"><svg viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="M1 1.5 6 6.5l5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="dropdown" id="nav-menu-solutions">
+              <a href="index.html#solutions-build-ai">Build Enterprise AI</a>
+              <a href="index.html#solutions-modernize-data">Modernize My Data Platform</a>
+              <a href="index.html#solutions-value-data">Get More Value From My Data</a>
+              <a href="index.html#solutions-cloud">Move to the Cloud</a>
+              <a href="index.html#solutions-automate">Automate Business Processes</a>
+              <a href="index.html#solutions-optimize">Improve Performance &amp; Reduce Cost</a>
+              <a href="case-studies.html">Case Studies</a>
+              <a href="ai-lab.html">SourceTX AI Lab</a>
+              <a href="assessment.html">Data &amp; AI Assessment</a>
+              <a href="managed-services.html">Managed Services</a>
+          </div>
+        </div>
+        <div class="nav-item has-dropdown">
+          <a class="nav-link" href="ai-machine-learning.html" aria-haspopup="true">AI &amp; Data</a>
+          <button class="nav-caret" type="button" aria-expanded="false" aria-controls="nav-menu-aidata" aria-label="Toggle AI &amp; Data submenu"><svg viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="M1 1.5 6 6.5l5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="dropdown" id="nav-menu-aidata">
+              <a href="ai-machine-learning.html">AI &amp; Machine Learning</a>
+              <a href="ai-automation-agents.html">AI Automation &amp; Agents</a>
+              <a href="ai-workflow-automation.html">AI Integration &amp; Workflow</a>
+              <a href="data-analytics.html">Data &amp; Analytics</a>
+              <a href="data-engineering-pipelines.html">Data Engineering &amp; Pipelines</a>
+              <a href="cloud-devops.html">Cloud &amp; DevOps</a>
+              <a href="ai-lab.html">SourceTX AI Lab</a>
+          </div>
+        </div>
+        <a class="nav-link" href="services.html#industries">Industries</a>
+        <a class="nav-link" href="index.html#technology">Technology</a>
+        <a class="nav-link active" href="insights.html">Insights</a>
+        <a class="nav-link" href="about.html">About</a>
+        <div class="nav-item has-dropdown">
+          <a class="nav-link" href="job-seekers.html" aria-haspopup="true">Careers</a>
+          <button class="nav-caret" type="button" aria-expanded="false" aria-controls="nav-menu-careers" aria-label="Toggle Careers submenu"><svg viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="M1 1.5 6 6.5l5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="dropdown" id="nav-menu-careers">
+              <a href="job-seekers.html">Job Seekers</a>
+              <a href="jobs.html">Open Roles</a>
+              <a href="employers.html">Work With Us</a>
+          </div>
+        </div>
+        <a class="btn btn-small btn-gradient" href="contact.html">Talk to an Expert</a>
+      </nav>
+    </div>
+  </header>
+<!--src-shell-header-end-->
+
+  <main id="main">
+    <section class="service-hero" style="background-image:linear-gradient(100deg, rgba(8,23,46,0.88) 0%, rgba(13,35,66,0.74) 55%, rgba(18,50,88,0.44) 100%), url('pictures/hero-team.webp')">
+      <span class="hero-glow" aria-hidden="true"></span>
+      <div class="container service-hero-grid">
+        <div class="reveal">
+          <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="https://sourcetx.com/">Home</a></li><li aria-current="page">Insights</li></ol></nav>
+          <span class="eyebrow"><!--e:pf:hero.eyebrow-->Insights<!--/e--></span>
+          <h1><!--e:pf:hero.title-->Ideas and guidance for modern AI, data and cloud teams<!--/e--></h1>
+          <p><!--e:pf:hero.intro-->Practical perspectives from our engineering, data, and AI teams on the challenges we help enterprises solve.<!--/e--></p>
+        </div>
+        <img class="animated-visual reveal" src="pictures/animated-services-ecosystem.svg" alt="Illustration of a modern data and AI ecosystem">
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="insight-filters reveal" role="group" aria-label="Filter insights by category">
+          <button class="insight-filter" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="insight-filter" type="button" data-filter="ai-generative-ai" aria-pressed="false">AI &amp; Generative AI</button>
+          <button class="insight-filter" type="button" data-filter="data-engineering" aria-pressed="false">Data Engineering</button>
+          <button class="insight-filter" type="button" data-filter="cloud" aria-pressed="false">Cloud</button>
+          <button class="insight-filter" type="button" data-filter="databricks" aria-pressed="false">Databricks</button>
+          <button class="insight-filter" type="button" data-filter="snowflake" aria-pressed="false">Snowflake</button>
+          <button class="insight-filter" type="button" data-filter="microsoft-fabric" aria-pressed="false">Microsoft Fabric</button>
+          <button class="insight-filter" type="button" data-filter="analytics" aria-pressed="false">Analytics</button>
+          <button class="insight-filter" type="button" data-filter="software-engineering" aria-pressed="false">Software Engineering</button>
+          <button class="insight-filter" type="button" data-filter="architecture" aria-pressed="false">Architecture</button>
+          <button class="insight-filter" type="button" data-filter="data-governance" aria-pressed="false">Data Governance</button>
+        </div>
+
+        <div class="insights-grid" id="insights-grid">
+          <article class="insight-card reveal" id="enterprise-ai-agents" data-cat="ai-generative-ai data-engineering">
+            <span class="insight-cat">AI &amp; Generative AI</span>
+            <h3>Building Enterprise AI Agents That Work With Your Business Data</h3>
+            <p>Agents become valuable when they can reliably reach trusted data and act within clear guardrails.</p>
+            <details><summary>Key considerations</summary><ul class="service-list"><li>Ground agents in governed, permission-aware data sources.</li><li>Give agents a narrow set of well-defined tools and actions.</li><li>Log reasoning steps and enforce approval for high-impact actions.</li><li>Start with a single high-value workflow before scaling.</li></ul></details>
+          </article>
+
+          <article class="insight-card reveal" id="rag-vs-finetuning" data-cat="ai-generative-ai architecture">
+            <span class="insight-cat">AI &amp; Generative AI</span>
+            <h3>RAG vs Fine-Tuning: Choosing the Right Enterprise AI Architecture</h3>
+            <p>Most enterprise use cases are best served by retrieval-augmented generation, with fine-tuning applied selectively.</p>
+            <details><summary>Key considerations</summary><ul class="service-list"><li>Use RAG when knowledge changes often and citations matter.</li><li>Use fine-tuning to shape style or behavior, not to inject facts.</li><li>Combine both when a domain needs new behavior and fresh knowledge.</li><li>Evaluate with real tasks, not just generic benchmarks.</li></ul></details>
+          </article>
+
+          <article class="insight-card reveal" id="databricks-snowflake-fabric" data-cat="databricks snowflake microsoft-fabric architecture">
+            <span class="insight-cat">Architecture</span>
+            <h3>Databricks vs Snowflake vs Microsoft Fabric</h3>
+            <p>Each platform is strong; the right choice depends on your workloads, team, and existing ecosystem.</p>
+            <details><summary>Key considerations</summary><ul class="service-list"><li>Databricks: engineering-heavy and ML workloads on the lakehouse.</li><li>Snowflake: governed warehousing and analytics with strong SQL tooling.</li><li>Fabric: tight integration across Microsoft analytics and Power BI.</li><li>Evaluate governance, cost model, and skills before committing.</li></ul></details>
+          </article>
+
+          <article class="insight-card reveal" id="modernizing-etl" data-cat="data-engineering cloud">
+            <span class="insight-cat">Data Engineering</span>
+            <h3>Modernizing Legacy ETL Pipelines</h3>
+            <p>Modernization works best as an incremental migration, not a big-bang rewrite.</p>
+            <details><summary>Key considerations</summary><ul class="service-list"><li>Inventory pipelines and rank by business criticality.</li><li>Introduce a governed lakehouse layer alongside legacy ETL.</li><li>Migrate in waves with validation and reconciliation at each step.</li><li>Retire legacy jobs only once downstream consumers are verified.</li></ul></details>
+          </article>
+
+          <article class="insight-card reveal" id="lakehouse-architecture" data-cat="data-engineering databricks architecture">
+            <span class="insight-cat">Data Engineering</span>
+            <h3>Building a Modern Lakehouse Architecture</h3>
+            <p>A layered lakehouse balances flexibility with the trust analytics teams need.</p>
+            <details><summary>Key considerations</summary><ul class="service-list"><li>Use bronze, silver, and gold layers with clear ownership.</li><li>Adopt open table formats for portability and performance.</li><li>Enforce schema, quality checks, and lineage by default.</li><li>Serve BI, ML, and AI from the same governed data.</li></ul></details>
+          </article>
+
+          <article class="insight-card reveal" id="data-for-genai" data-cat="data-governance ai-generative-ai">
+            <span class="insight-cat">Data Governance</span>
+            <h3>How to Prepare Enterprise Data for Generative AI</h3>
+            <p>Generative AI is only as good as the data and access controls behind it.</p>
+            <details><summary>Key considerations</summary><ul class="service-list"><li>Improve quality and consistency in the sources that matter most.</li><li>Apply permission-aware retrieval so users only see what they may.</li><li>Track lineage and freshness for every retrieved source.</li><li>Keep sensitive data out of ungoverned prompts.</li></ul></details>
+          </article>
+
+          <article class="insight-card reveal" id="reducing-spark-costs" data-cat="databricks data-engineering cloud">
+            <span class="insight-cat">Data Engineering</span>
+            <h3>Reducing Databricks and Spark Costs</h3>
+            <p>Most cost savings come from better data layout, smarter job design, and right-sized compute.</p>
+            <details><summary>Key considerations</summary><ul class="service-list"><li>Compact small files and choose the right partitioning.</li><li>Optimize joins and avoid unnecessary shuffles.</li><li>Right-size clusters and use autoscaling with spot where safe.</li><li>Measure cost per pipeline and make it visible to owners.</li></ul></details>
+          </article>
+
+          <article class="insight-card reveal" id="realtime-pipelines" data-cat="data-engineering analytics">
+            <span class="insight-cat">Data Engineering</span>
+            <h3>Designing Reliable Real-Time Data Pipelines</h3>
+            <p>Reliability in streaming comes from explicit contracts and back-pressure handling.</p>
+            <details><summary>Key considerations</summary><ul class="service-list"><li>Define schemas and compatibility rules up front.</li><li>Design for idempotency and exactly-once where it matters.</li><li>Monitor lag, throughput, and failure rates continuously.</li><li>Plan replay and recovery, not just happy-path flow.</li></ul></details>
+          </article>
+
+          <article class="insight-card reveal" id="data-governance-strategy" data-cat="data-governance">
+            <span class="insight-cat">Data Governance</span>
+            <h3>Building an Enterprise Data Governance Strategy</h3>
+            <p>Governance succeeds when it is practical, automated, and tied to business outcomes.</p>
+            <details><summary>Key considerations</summary><ul class="service-list"><li>Start with clear ownership for critical data domains.</li><li>Automate quality, lineage, and access controls where possible.</li><li>Define policies people can follow, not just documents.</li><li>Measure adoption and data trust over time.</li></ul></details>
+          </article>
+
+          <article class="insight-card reveal" id="warehouse-to-cloud" data-cat="cloud analytics snowflake">
+            <span class="insight-cat">Cloud</span>
+            <h3>Moving From Legacy Data Warehouses to the Cloud</h3>
+            <p>A successful warehouse migration modernizes processes, not just platforms.</p>
+            <details><summary>Key considerations</summary><ul class="service-list"><li>Assess workloads and rationalize what should move or retire.</li><li>Model data for the cloud instead of lifting and shifting as-is.</li><li>Automate ingestion, transformation, and testing.</li><li>Plan a phased cutover with parallel validation.</li></ul></details>
+          </article>
+        </div>
+        <p class="insights-empty" id="insights-empty" hidden>No insights in this category yet.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container cta reveal">
+        <div>
+          <span class="eyebrow"><!--e:pf:section.1.eyebrow-->Let's talk<!--/e--></span>
+          <h2><!--e:pf:section.1.title-->Want to go deeper on any of these topics?<!--/e--></h2>
+          <p><!--e:pf:section.1.intro-->Our teams are happy to discuss how these ideas apply to your environment.<!--/e--></p>
+        </div>
+        <div class="actions">
+          <a class="btn btn-white" href="contact.html"><!--e:pf:button.0-->Talk to an Expert<!--/e--></a>
+          <a class="btn btn-outline" href="services.html"><!--e:pf:button.1-->Explore Services<!--/e--></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--src-shell-footer-->
+<footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="SourceTX home">
+            <img class="logo-mark" src="pictures/sourceTX-mark.png" alt="SourceTX mark" width="29" height="36">
+            <span class="wordmark">Source<span class="tx">TX</span></span>
+          </a>
+          <p>Technology engineering and AI transformation — software, cloud, data, AI, automation, and security from strategy to production.</p>
+          <div class="footer-contact">
+            <a href="mailto:info@sourcetx.com">info@sourcetx.com</a>
+            <a href="tel:+12015007797">+1 (201) 500-7797</a>
+            <a href="https://www.linkedin.com/company/sourcetx-inc-" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <strong>Company</strong>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="case-studies.html">Case Studies</a>
+          <a href="ai-lab.html">AI Lab</a>
+          <a href="assessment.html">AI Readiness Assessment</a>
+          <a href="managed-services.html">Managed Services</a>
+          <a href="insights.html">Insights</a>
+          <a href="services.html#industries">Industries</a>
+          <a href="employers.html">Work With Us</a>
+          <a href="job-seekers.html">Careers</a>
+          <a href="contact.html">Employment Verification</a>
+        </div>
+        <div class="footer-col">
+          <strong>Services</strong>
+          <a href="software-development.html">Software Development</a>
+          <a href="mobile-app-development.html">Mobile App Development</a>
+          <a href="ui-ux-design.html">UI/UX Design</a>
+          <a href="cloud-devops.html">Cloud &amp; DevOps</a>
+          <a href="qa-testing.html">QA &amp; Testing</a>
+          <a href="data-analytics.html">Data &amp; Analytics</a>
+          <a href="ai-machine-learning.html">AI &amp; Machine Learning</a>
+          <a href="ai-automation-agents.html">AI Automation &amp; Agents</a>
+          <a href="digital-transformation.html">Digital Transformation</a>
+          <a href="staff-augmentation.html">Staff Augmentation</a>
+          <a href="project-management.html">Project Management</a>
+          <a href="ai-workflow-automation.html">AI Integration &amp; Workflow</a>
+          <a href="managed-security-compliance.html">Managed Security &amp; Compliance</a>
+          <a href="cloud-infrastructure-optimization.html">Cloud Optimization &amp; Infrastructure</a>
+          <a href="data-engineering-pipelines.html">Data Engineering &amp; Pipelines</a>
+        </div>
+        <div class="footer-col">
+          <strong>Offices</strong>
+          <span>Fort Lee, NJ</span>
+          <span>Pittsburgh, PA</span>
+          <span>Tampa, FL</span>
+          <span>London, UK</span>
+        </div>
+      </div>
+      <div class="copyright">
+        <span>© <span data-year></span> SourceTX. All rights reserved.</span>
+        <span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></span>
+      </div>
+    </div>
+  </footer>
+<!--src-shell-footer-end-->
+  <script defer src="js/chat-widget.js?v=4"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "careers": "Careers",
+    "jobs": "Jobs",
+    "contact": "Contact"
+  },
+  "cta": {
+    "label": "Talk to an Expert",
+    "href": "contact.html"
+  },
+  "hero": {
+    "eyebrow": "Technology Engineering & AI Transformation",
+    "title": "Build smarter. Move faster. Transform with confidence.",
+    "subtitle": "SourceTX helps organizations modernize applications, automate operations, unlock the value of their data, and build intelligent digital products.",
+    "primary": "Start Your Project",
+    "secondary": "Explore Our Services"
+  },
+  "footer": {
+    "tagline": "Technology engineering and AI transformation — software, cloud, data, AI, automation, and security from strategy to production.",
+    "email": "info@sourcetx.com",
+    "phone": "+1 (201) 500-7797",
+    "name": "SourceTX"
+  }
+}

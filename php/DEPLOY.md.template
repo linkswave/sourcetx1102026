@@ -1,0 +1,88 @@
+# SourceTX PHP Deployment (Namecheap cPanel)
+
+This folder is the upload-ready build. Do not edit files here; rebuild from source instead.
+
+## 1. Create the database
+
+1. cPanel -> MySQL Databases: create a database and a user, then grant the user ALL PRIVILEGES on it.
+2. cPanel -> phpMyAdmin: select the database, open Import, and upload `_app/sql/schema.sql`.
+
+## 2. Configure the application
+
+1. Copy `_app/config.example.php` to `_app/config.php`.
+2. Fill in:
+   - `dbHost`, `dbPort`, `dbName`, `dbUser`, `dbPass`
+   - `smtpHost`, `smtpPort`, `smtpSecure` (`ssl` or `tls`), `smtpUser`, `smtpPass`
+   - `mailFrom`, `notifyEmail`
+   - `siteUrl` (for example `https://sourcetx.com`)
+   - `adminUser` and `adminPassHash`
+3. Generate the admin password hash locally:
+
+   php -r "echo password_hash('YOUR-PASSWORD', PASSWORD_DEFAULT);"
+
+## 3. Upload
+
+1. Upload the contents of this folder into the domain document root (`public_html` for the main
+   domain, or the addon domain folder) using File Manager or FTP.
+2. Confirm `_app/config.php` is present on the server (it is intentionally excluded from the repo).
+3. Confirm `_app/.htaccess` exists; it denies direct web access to code, config, and SQL.
+
+## 4. Host settings
+
+1. cPanel -> MultiPHP Manager: select PHP 8.1 or newer for the domain.
+2. Confirm the `pdo_mysql` and `mbstring` extensions are enabled (default on Namecheap).
+3. Confirm the PHP upload limits allow contact attachments. In cPanel -> MultiPHP INI Editor set
+   `upload_max_filesize` and `post_max_size` to at least `11M` (Namecheap usually defaults higher,
+   but verify).
+4. Ensure `_app/uploads/messages/` is writable by the web user (the app creates it on first use).
+5. Run cPanel -> SSL/TLS Status -> Run AutoSSL, then confirm HTTPS works.
+
+## 5. Smoke test
+
+- Visit `/` and a few service pages.
+- Visit `/jobs` and an individual job such as `/jobs/<id>`.
+- Submit the contact form and an application; confirm rows in phpMyAdmin and notification emails.
+- Submit the contact form with an attachment; confirm the file is stored in
+  `_app/uploads/messages/`, arrives with the notification email, and downloads from the admin
+  Messages tab.
+- Open the chat widget and ask a question.
+- Visit `/admin`, sign in, confirm the Applications/Messages/Talent Requests/Jobs tabs work.
+- Visit `/sitemap.xml` and confirm `/jobs/<id>` entries are present.
+
+## 6. Importing jobs from JSON
+
+Bulk-load jobs from a JSON array with the bundled CLI tool. It is insert-only: a job is added only
+when its `id` is not already in the `jobs` table, and existing rows are never modified.
+
+1. Upload your jobs file (for example `jobs.json`) somewhere above or outside the document root.
+2. From the document root (`public_html`), open cPanel -> Terminal and run:
+
+   php _app/tools/import-jobs.php /path/to/jobs.json --dry-run
+   php _app/tools/import-jobs.php /path/to/jobs.json
+
+3. The tool prints `imported N, skipped M, invalid K, total now T`. Re-running is safe. Use
+   `--source=NAME` to tag the rows (default `import`).
+
+An admin can also paste the same JSON on the Jobs tab via the "Import JSON" button (with an optional
+dry run). Both paths share the same insert-only rules and never modify existing jobs.
+
+The file must be a JSON array of job objects, or an object with a `jobs` array. Each job requires a
+non-empty `id` and `title`; `responsibilities`, `requirements`, and `skills` may be arrays.
+
+## 7. Updating an existing database
+
+The contact form stores one optional attachment per message. Databases created before this feature
+need the new columns added once via cPanel -> phpMyAdmin -> SQL:
+
+    ALTER TABLE messages ADD COLUMN attachment VARCHAR(255);
+    ALTER TABLE messages ADD COLUMN originalAttachmentName VARCHAR(255);
+
+If the columns already exist, MySQL returns an error and nothing changes.
+
+## Notes
+
+- The résumé field is a link (URL); no files are uploaded or stored.
+- The contact form accepts one optional attachment up to 10MB (PDF, Office, text, or image). Stored
+  files live in `_app/uploads/messages/` and download from the admin Messages tab.
+- Jobs are managed in the admin Jobs tab. There is no automatic stale-job close on PHP.
+- `_app/config.php` must never be committed to version control.

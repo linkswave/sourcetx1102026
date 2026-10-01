@@ -1,0 +1,30 @@
+DirectoryIndex index.html index.php
+Options -Indexes
+
+RewriteEngine On
+
+# Force the dynamic sitemap even though a static sitemap.xml exists.
+RewriteRule ^sitemap\.xml$ sitemap.php [L]
+
+# Serve real files and directories directly (static site and assets).
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Dynamic routes
+RewriteRule ^jobs/?$                          jobs.html                [L]
+RewriteRule ^jobs/([A-Za-z0-9._-]+)/?$        job.php?id=$1            [L,QSA]
+RewriteRule ^apply/?$                         general-application.html [L]
+RewriteRule ^apply/([A-Za-z0-9._-]+)/?$       apply.php?id=$1          [L,QSA]
+
+RewriteRule ^api/jobs$                        api/jobs.php             [L,QSA]
+RewriteRule ^api/contact$                     api/contact.php          [L,QSA]
+RewriteRule ^api/apply$                       api/apply.php            [L,QSA]
+RewriteRule ^api/talent-request$              api/talent-request.php   [L,QSA]
+RewriteRule ^api/chat$                        api/chat.php             [L,QSA]
+
+RewriteRule ^admin/?$                         admin/index.php          [L,QSA]
+RewriteRule ^admin/login/?$                   admin/login.php          [L,QSA]
+RewriteRule ^admin/logout/?$                  admin/logout.php         [L,QSA]
+RewriteRule ^admin/export/([a-z-]+)\.csv$     admin/export.php?kind=$1 [L,QSA]
+RewriteRule ^api/admin/([A-Za-z0-9_/-]+)$     admin/api.php?route=$1   [L,QSA]

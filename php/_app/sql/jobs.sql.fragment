@@ -1,0 +1,22 @@
+CREATE TABLE IF NOT EXISTS jobs (
+  id VARCHAR(64) PRIMARY KEY,
+  title VARCHAR(255),
+  location VARCHAR(255),
+  type VARCHAR(64),
+  department VARCHAR(200),
+  posted DATE,
+  summary TEXT,
+  description TEXT,
+  responsibilities TEXT,
+  requirements TEXT,
+  skills TEXT,
+  sourceUrl VARCHAR(512),
+  source VARCHAR(64),
+  lastRefreshed DATE,
+  active TINYINT(1) DEFAULT 1,
+  closedReason VARCHAR(255),
+  closedAt DATETIME NULL,
+  createdAt DATETIME,
+  updatedAt DATETIME,
+  INDEX idx_jobs_active_posted (active, posted)
+) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
